@@ -1,5 +1,4 @@
 #include "Array.h"
-#include <iostream>
 template <class T> Array<T>::Array() {
 	pArray = new T;
 	size = 0;
@@ -52,7 +51,6 @@ template <class T> void Array<T>::PushBack(T newElement) {
 		T *tmp = new T[capacity];
 		for (int i = 0; i < size; ++i) {
 			tmp[i] = pArray[i];
-			std::cout << pArray[i] << ' ';
 		}
 		tmp[size] = newElement;
 		++size;
